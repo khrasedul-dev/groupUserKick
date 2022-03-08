@@ -22,6 +22,7 @@ bot.on('new_chat_members',ctx=>{
         ctx.kickChatMember(ctx.from.id).then((data)=>console.log('User Removed')).catch((e)=>console.log(e))
     }
 
+
 })
 
 
@@ -40,9 +41,12 @@ bot.on('text',ctx=>{
 
     console.log(namelength)
 
-    if(namelength> 35){
+    
+setTimeout(() => {
+   if(namelength> 35){
         ctx.kickChatMember(ctx.from.id).then((data)=>console.log('User Removed')).catch((e)=>console.log(e))
     }
+}, 1000)
 
 })
 
