@@ -3,6 +3,7 @@ const { Telegraf , Composer } = require('micro-bot')
 const bot = new Composer()
 
 bot.on('new_chat_members',ctx=>{
+	console.log(ctx)
     const f = ctx.from.first_name || '0'
     const l = ctx.from.last_name || '0'
 
